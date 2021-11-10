@@ -269,6 +269,8 @@
     php bin/console doctrine:fixtures:load --group=group1 --group=group2
 #### Une Fixture en particulier
     php bin/console doctrine:fixtures:load --group=UserFixtures
+#### Pour les tests utilisez 
+    bin/phpunit --testdox 
 
 #### Désormais, vous savez utiliser les Fixtures avec des liaisons entre deux Fixtures. 
 #### Cela s’avère pratique pour mettre en place rapidement un environnement avec des fausses data, 
