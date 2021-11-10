@@ -73,6 +73,7 @@
             "App\\Tests\\": "tests/"
         }
     },
+
     "replace": {
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
