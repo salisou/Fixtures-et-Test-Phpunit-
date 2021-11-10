@@ -1,0 +1,34 @@
+image: edbizarro/gitlab-ci-pipeline-php:7.2-alpine
+
+cache:
+  paths:
+    - vendor/
+
+services:
+  - mysql:latest
+stages:
+  - build
+  - test
+
+variables:
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_USER: homestead
+  MYSQL_PASSWORD: secret
+  MYSQL_DATABASE: homestead
+  DB_HOST: mysql
+  GIT_STRATEGY: fetch
+
+build:
+  stage: build
+  script:
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress
+    - sudo apk add --no-cache zip unzip
+
+test:
+  stage: test
+  script:
+    - php bin/console doctrine:schema:update --force --env=test
+    - php bin/console doctrine:fixture:load --no-interaction --env=test
+    - ./vendor/bin/simple-phpunit
+  dependencies:
+    - build
