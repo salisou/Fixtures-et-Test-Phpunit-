@@ -23,6 +23,7 @@ when@test:
         session:
             storage_factory_id: session.storage.factory.mock_file
 
-liip_test_fixtures:
-    cache_db:
-        sqlite: 'Liip\TestFixturesBundle\Services\DatabaseBackup\SqliteDatabaseBackup'
+#liip_test_fixtures:
+#    cache_db:
+#        sqlite: 'Liip\TestFixturesBundle\Services\DatabaseBackup\SqliteDatabaseBackup'
+#

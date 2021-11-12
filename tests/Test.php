@@ -13,6 +13,7 @@ class Test extends TestCase
         $uri = "Test 2";
 
         $article->setUri($uri);
+
         $this->assertEquals("test_2", $article->getUri());
     }
 }
