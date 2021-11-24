@@ -13,7 +13,7 @@
 
 
 #### Mise en place
-#### Les fixtures se situent dans le dossier src, le dossier s’appelle DataFixtures. 
+#### Les fixtures sont dans le dossier src, le dossier s’appelle DataFixtures. 
 #### Je vais créer un projet Symfony avec une entité simple : Article.
 
 #### uri string, title string
